@@ -6,17 +6,11 @@ for a in "$@"; do
     args[$i]='-c'
     let i+=1
     if [[ "$a" == :* ]]; then
-        args[$i]="$a"
+        args[$i]="%$a"
     else
-        args[$i]="norm $a"
+        args[$i]="%norm $a"
     fi
     let i+=1
 done
 
-cat | vim - -u NONE -esbnN \
-    -c 'norm gg' \
-    -c 'norm qq' \
-    "${args[@]}" \
-    -c 'norm q' \
-    -c '2,$norm @q' \
-    -c 'w!/dev/stdout|q!' | head -n -1
+cat | vim - -u NONE -esbnN "${args[@]}" -c 'w!/dev/stdout|q!' | head -n -1
