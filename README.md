@@ -39,5 +39,8 @@ $ chmod u+x visd
 $ export PATH=$PATH:.
 ```
 
+## Acknowledgements
+**visd** is essentially an easy-to-use utility around the concepts presented in this great blog post http://blog.robertelder.org/use-vim-inside-a-unix-pipe-like-sed-or-awk/. Have a read to understand how it works!
+
 ## License
 Licensed under the MIT License, see LICENSE for details.
