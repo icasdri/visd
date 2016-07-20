@@ -10,20 +10,20 @@ $ echo "<h1>Hello World</h1>" | visd 'f>lcitWelcome'
 <h1>Welcome<h1>
 ```
 
-Ex-mode replacement and a basic word change.
+Ex-mode replacement and a basic word change. 
 ```
-$ echo "This is a tsee" | visd ':s/tsee/test/' '0cwThat'
+$ echo "This is a tsee" | visd ':s/tsee/test/' 'cwThat'
 That is a test
 ```
 
-In-word movement, simple character appending, and a visual-mode command! Additionally, `visd` behaves like `sed` and operates on a per-line basis.
+In-word movement, simple character appending, and a visual-mode command! Additionally, `visd` behaves like `sed` and operates on a per-line basis. Note that, each sequence of commands always starts execution at the start of the line.
 ```
 $ cat records.txt
 John 18
 Alex 26
 Richard 40
 
-$ cat records.txt | visd 'Ea,' 'A.' '0vwgU'
+$ cat records.txt | visd 'Ea,' 'A.' 'vwgU'
 JOHN, 18.
 ALEX, 26.
 RICHARD, 40.
