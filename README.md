@@ -39,6 +39,8 @@ $ chmod u+x visd
 $ export PATH=$PATH:.
 ```
 
+For Arch Linux users, the package [visd-git](https://aur.archlinux.org/packages/visd-git/) is available in the AUR.
+
 ## Acknowledgements
 **visd** is essentially an easy-to-use utility around the concepts presented in this great blog post http://blog.robertelder.org/use-vim-inside-a-unix-pipe-like-sed-or-awk/. Have a read to understand how it works!
 
